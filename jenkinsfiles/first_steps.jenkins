@@ -14,8 +14,10 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo "================ start building ================"
-
-                    sh 'ssh root@ub1 docker run hello-word'
+                    sh '''
+                    echo ssh root@ub1 su - delegant
+                    ub1 docker run hello-
+                    '''
                 
             }
         }
