@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  postgres:
+    image: 'postgres:10'
+    container_name: 'ub1-postgres'
+    environment:
+      - 'POSTGRES_USER=UserPadawan'
+      - 'POSTGRES_PASSWORD=joda'
+      - 'POSTGRES_DB=StarWars'
+  app:
+    build: ./
+    container_name: 'ub1-app'
+    ports:
+      - "8080:8080"
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"

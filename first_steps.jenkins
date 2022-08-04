@@ -1,0 +1,23 @@
+#!groovy
+// Check ub1 properties
+properties([disableConcurrentBuilds()])
+
+pipeline {
+    agent {
+        label '13_branch_for_test_docker'
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+    stages {
+        stage("create docker image") {
+            steps {
+                echo "================ start building ================"
+                dir ('./'){
+                    sh 'ssh root@ub1 docker build .'
+                }
+            }
+        }
+    }
+}
