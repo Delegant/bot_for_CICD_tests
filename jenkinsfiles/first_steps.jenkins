@@ -16,7 +16,7 @@ pipeline {
                 echo "================ start building ================"
                     sh '''
                     echo ssh root@ub1 su - delegant
-                    ub1 docker run hello-
+                    ub1 docker run hello-word
                     '''
                 
             }
