@@ -15,6 +15,9 @@ pipeline {
             steps {
                 echo "================ start building ================"
                 dir ('docker'){
+                    sh 'ssh root@ub1 su - delehant'
+                    sh 'ssh root@ub1 echo $USER'
+                    sh 'ssh root@ub1 ip a'
                     sh 'ssh root@ub1 su - delegant -s /bin/bash && ssh root@ub1 docker build .'
                 }
             }
