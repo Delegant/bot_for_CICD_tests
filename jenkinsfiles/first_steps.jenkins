@@ -16,7 +16,7 @@ pipeline {
                 echo "================ start building ================"
                 dir ('docker'){
                     sh 'ls -la'
-                    sh 'ssh root@ub1 su - delegant && ssh root@ub1 echo $USER'
+                    sh 'ssh root@ub1 su - delegant -s /bin/bash && ssh root@ub1 echo $USER'
                     sh 'ls -la'
                     sh 'ssh root@ub1 ls -la'
                     sh 'ssh root@ub1 ip a'
