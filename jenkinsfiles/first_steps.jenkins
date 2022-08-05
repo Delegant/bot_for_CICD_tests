@@ -20,7 +20,7 @@ pipeline {
                     sh 'ls -la'
                     sh 'ssh root@ub1 ls -la'
                     sh 'ssh root@ub1 ip a'
-                    sh 'ssh root@ub1 su - delegant -s /bin/bash && ssh root@ub1 docker run hello-word'
+                    sh 'ssh root@ub1 su - delegant -s /bin/bash && ssh root@ub1 docker run hello-world'
                 }
             }
         }
