@@ -10,7 +10,7 @@ services:
       - 'POSTGRES_DB=StarWars'
 
   app:
-    build: ./
+    build: docker
     container_name: 'ub1-app'
     ports:
       - "8080:8080"
