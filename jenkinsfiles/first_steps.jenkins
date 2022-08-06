@@ -16,7 +16,7 @@ pipeline {
                 echo "================ start building ================"
                 dir ('docker'){
                     sh 'ls -la'
-                    sh 'docker-compose up -d --build'
+                    sh 'docker compose up'
                 }
             }
         }
