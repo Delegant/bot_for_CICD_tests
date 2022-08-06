@@ -1,4 +1,4 @@
 FROM maven:3.6.3-jdk-11
 COPY ./ ./
-RUN mvn -DskipTests clean package
+RUN mvn clean package
 ENTRYPOINT ["java", "-jar", "backend.jar"]
