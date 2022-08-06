@@ -8,10 +8,10 @@ services:
       - 'POSTGRES_USER=UserPadawan'
       - 'POSTGRES_PASSWORD=joda'
       - 'POSTGRES_DB=StarWars'
- app:
-   build: ..
-   container_name: 'ub1-app'
-   ports:
-     - "8080:8080"
-   environment:
-     - "SPRING_PROFILES_ACTIVE=docker"
+#  app:
+#    build: ..
+#    container_name: 'ub1-app'
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      - "SPRING_PROFILES_ACTIVE=docker"
