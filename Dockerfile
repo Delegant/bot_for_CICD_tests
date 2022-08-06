@@ -1,3 +1,4 @@
-FROM openjdk:17
-ADD /target/telegram-bot-0.0.1-SNAPSHOT.jar backend.jar
+FROM maven:3.6.3-jdk-11
+COPY ./ ./
+RUN maven -DskipTests clean package
 ENTRYPOINT ["java", "-jar", "backend.jar"]
