@@ -8,8 +8,9 @@ services:
       - 'POSTGRES_USER=UserPadawan'
       - 'POSTGRES_PASSWORD=joda'
       - 'POSTGRES_DB=StarWars'
+      
  app:
-   build: ..
+   build: ./
    container_name: 'ub1-app'
    ports:
      - "8080:8080"
