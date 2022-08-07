@@ -1,7 +1,7 @@
 FROM maven:3.8.6-jdk-11 AS MAVEN_BUILD
 COPY ./ ./
 RUN mkdir -p /root/.m2 \
-    && mkdir /root/.m2/repository/org/springframework/boot/spring-boot-starter-parent/2.6.5
+    && mkdir -p /root/.m2/repository/org/springframework/boot/spring-boot-starter-parent/2.6.5
 COPY .m2/repository/org/springframework/boot/spring-boot-starter-parent/2.6.5/spring-boot-starter-parent-2.6.5.pom \
 /root/.m2/repository/org/springframework/boot/spring-boot-starter-parent/2.6.5/spring-boot-starter-parent-2.6.5.pom
 RUN mvn clean package
