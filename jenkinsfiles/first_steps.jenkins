@@ -14,10 +14,8 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo "================ start building ================"
-                dir ('docker'){
                     sh 'ls -la'
                     sh 'docker compose up'
-                }
             }
         }
     }
