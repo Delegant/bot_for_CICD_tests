@@ -1,13 +1,13 @@
 version: '3'
 
 services:
-  postgres:
-    image: 'postgres:10'
-    container_name: 'ub1-postgres'
-    environment:
-      - 'POSTGRES_USER=UserPadawan'
-      - 'POSTGRES_PASSWORD=joda'
-      - 'POSTGRES_DB=StarWars'
+#  postgres:
+#    image: 'postgres:10'
+#    container_name: 'ub1-postgres'
+#    environment:
+#      - 'POSTGRES_USER=UserPadawan'
+#      - 'POSTGRES_PASSWORD=joda'
+#      - 'POSTGRES_DB=StarWars'
 
   app:
     build: .
