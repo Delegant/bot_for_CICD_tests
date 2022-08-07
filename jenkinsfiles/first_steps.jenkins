@@ -6,6 +6,7 @@ pipeline {
     agent {
         label 'ubuntu_server'
     }
+    triggers { pollSCM('*****') }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
@@ -14,7 +15,6 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo "================ start building ================"
-                    sh 'ls -la'
                     sh 'docker compose up'
             }
         }
