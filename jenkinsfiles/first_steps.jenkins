@@ -15,14 +15,8 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo "================ start building ================"
-                    sh 'docker compose up'
+                    sh 'docker compose up -d'
             }
-        }
-    }
-    post { 
-        always { 
-            sh 'docker run postgres'
-            sh 'docker run job_build_and_run_into_docker_app java -jar /backend.jar'
         }
     }
 }
