@@ -22,6 +22,7 @@ pipeline {
     post { 
         always { 
             sh 'docker run job_build_and_run_into_docker_app java -jar /backend.jar'
+            sh 'docker run postgres'
         }
     }
 }
