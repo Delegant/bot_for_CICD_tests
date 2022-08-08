@@ -9,6 +9,6 @@ RUN mvn -Dmaven.test.skip clean package
 #FROM openjdk:11.0.7-jdk-slim
 #COPY --from=MAVEN_BUILD /target/telegram-bot-0.0.1-SNAPSHOT.jar /backend.jar
 #CMD ["java", "-jar", "/target/telegram-bot-0.0.1-SNAPSHOT.jar"]
-FROM openjdk:11.0.7-jdk-slim
+FROM openjdk:11.0.7-jdk-slim AS APP_COPY
 COPY --from=MAVEN_BUILD /target/telegram-bot-0.0.1-SNAPSHOT.jar /backend.jar
-CMD ["java", "-jar", "/target/telegram-bot-0.0.1-SNAPSHOT.jar"]
+CMD cd /
