@@ -21,7 +21,7 @@ pipeline {
     }
     post { 
         always { 
-            sh 'docker run job_build_and_run_into_docker_app sh java -jar /target/telegram-bot-0.0.1-SNAPSHOT.jar'
+            sh 'docker run job_build_and_run_into_docker_app java -jar /backend.jar'
         }
     }
 }
